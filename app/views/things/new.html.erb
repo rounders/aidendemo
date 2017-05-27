@@ -1,0 +1,24 @@
+<h1>Add a Thing</h1>
+
+<%= form_for @thing, html: { id: "thing-form" } do |f| %>
+  <p>
+    <%= f.label :name do %>
+      <%= f.radio_button :name, "foo" %> foo
+    <% end  %>
+  </p>
+
+  <p>
+    <%= f.label :name do %>
+      <%= f.radio_button :name, "bar" %> bar
+    <% end %>
+  </p>
+
+  <p>
+    <%= f.label :name do %>
+      <%= f.radio_button :name, "custom", id: "custom-option" %> custom
+    <% end  %>
+    <input type="text" id="custom-value" style="display: none">
+  </p>
+
+  <%= f.submit %>
+<% end %>
